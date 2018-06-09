@@ -1,0 +1,85 @@
+<html>
+<head>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col">
+			<div class="weather-card drizzle">
+				<div class="top">
+					<div class="wrapper">
+						<div class="mynav">
+							<a href="javascript:;"><span class="lnr lnr-chevron-left"></span></a>
+							<a href="javascript:;"><span class="lnr lnr-cog"></span></a>
+						</div>
+						<h1 class="heading">Drizzle</h1>
+						<h3 class="location">
+							<% if(city !== null){ %>
+								<p><%= city %></p>
+						  	<% } %>
+				  
+						  	<% if(error !== null){ %>
+								<p><%= error %></p>
+						  	<% } %></h3>
+						<h4 class="temp">
+							<!--<span class="temp-value">-->
+								<% if(temperature !== null){ %>
+									<p><%= temperature %></p>
+							  	<% } %>
+					  
+							  	<% if(error !== null){ %>
+									<p><%= error %>
+								  <% } %><!--</span>-->
+						0
+						<span class="deg">C</span>
+						</h4>
+						</p>
+					</div>
+				</div>
+				<div class="bottom">
+					<div class="wrapper">
+						<ul class="forecast">
+							<a href="javascript:;"><span class="lnr lnr-chevron-up go-up"></span></a>
+							<li class="active">
+								<span class="date">Yesterday</span>
+								<span class="lnr lnr-sun condition">
+									<span class="temp">
+										<% if(temperature !== null){ %>
+											<p><%= temperature %></p>
+										<% } %>
+								
+										<% if(error !== null){ %>
+											<p><%= error %></p>
+										<% } %>
+									<span class="deg">0</span><span class="temp-type">C</span></span>
+								</span>
+							</li>
+							<!--
+							<li>
+								<span class="date">Tomorrow</span>
+								<span class="lnr lnr-sun condition">
+									<span class="temp">
+										<% if(temperature !== null){ %>
+											<p><%= temperature %></p>
+										<% } %>
+								
+										<% if(error !== null){ %>
+											<p><%= error %></p>
+										<% } %>
+									<span class="deg">0</span><span class="temp-type">C</span></span>
+								</span>
+							</li>
+							-->
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
